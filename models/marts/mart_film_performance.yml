@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: mart_film_performance
+    description: "Mart untuk melihat performa rental dan revenue setiap film."
+    columns:
+      - name: film_id
+        description: "Unique identifier film."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: title
+        description: "Judul film."
+
+      - name: category
+        description: "Kategori film."
+
+      - name: rental_rate
+        description: "Harga rental film."
+
+      - name: inventory_count
+        description: "Jumlah copy film pada inventory."
+
+      - name: times_rented
+        description: "Jumlah film pernah dirental."
+
+      - name: total_revenue
+        description: "Total revenue yang dihasilkan film."

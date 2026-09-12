@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: stg_payments
+    description: "Staging model untuk data pembayaran."
+    columns:
+      - name: payment_id
+        description: "Unique identifier untuk payment."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: customer_id
+        description: "Identifier customer yang melakukan pembayaran."
+        data_tests:
+          - not_null
+
+      - name: rental_id
+        description: "Identifier rental terkait pembayaran."
+        data_tests:
+          - not_null
+
+      - name: staff_id
+        description: "Identifier staff yang menangani pembayaran."
+
+      - name: amount
+        description: "Nilai pembayaran."
+        data_tests:
+          - not_null
+
+      - name: paid_at
+        description: "Waktu pembayaran dilakukan."
+        data_tests:
+          - not_null

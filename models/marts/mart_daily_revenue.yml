@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: mart_daily_revenue
+    description: "Mart untuk melihat revenue harian pada setiap store."
+    columns:
+      - name: paid_date
+        description: "Tanggal pembayaran."
+        data_tests:
+          - not_null
+
+      - name: store_id
+        description: "Identifier store."
+        data_tests:
+          - not_null
+
+      - name: total_payments
+        description: "Jumlah transaksi payment pada tanggal dan store tersebut."
+
+      - name: unique_customers
+        description: "Jumlah customer unik pada tanggal dan store tersebut."
+
+      - name: total_revenue
+        description: "Total revenue pada tanggal dan store tersebut."

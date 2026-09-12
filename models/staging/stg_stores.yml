@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: stg_stores
+    description: "Staging model untuk data store."
+    columns:
+      - name: store_id
+        description: "Unique identifier untuk store."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: manager_staff_id
+        description: "Identifier staff yang menjadi manager store."
+
+      - name: address_id
+        description: "Identifier alamat store."

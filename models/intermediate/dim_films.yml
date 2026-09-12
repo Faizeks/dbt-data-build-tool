@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: dim_films
+    description: "Dimension film dengan kategori, rating, inventory, dan jumlah rental."
+    columns:
+      - name: film_id
+        description: "Unique identifier film."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: title
+        description: "Judul film."
+        data_tests:
+          - not_null
+
+      - name: category
+        description: "Kategori film yang digabung menjadi satu string."
+
+      - name: rating
+        description: "Rating MPAA film."
+
+      - name: rating_description
+        description: "Deskripsi rating yang berasal dari dbt seed."
+
+      - name: rental_rate
+        description: "Harga rental film."
+
+      - name: inventory_count
+        description: "Jumlah copy film pada inventory."
+
+      - name: times_rented
+        description: "Jumlah film tersebut pernah dirental."
+
+      - name: is_available
+        description: "Menunjukkan apakah film memiliki inventory."

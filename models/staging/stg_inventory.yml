@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: stg_inventory
+    description: "Staging model untuk inventory film."
+    columns:
+      - name: inventory_id
+        description: "Unique identifier untuk inventory."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: film_id
+        description: "Identifier film pada inventory."
+        data_tests:
+          - not_null
+
+      - name: store_id
+        description: "Identifier store tempat inventory berada."
+        data_tests:
+          - not_null

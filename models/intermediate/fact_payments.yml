@@ -1,0 +1,45 @@
+version: 2
+
+models:
+  - name: fact_payments
+    description: "Fact table untuk transaksi pembayaran rental."
+    columns:
+      - name: payment_id
+        description: "Unique identifier payment."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: paid_at
+        description: "Waktu pembayaran dilakukan."
+        data_tests:
+          - not_null
+
+      - name: paid_date
+        description: "Tanggal pembayaran."
+
+      - name: customer_id
+        description: "Identifier customer."
+
+      - name: customer_name
+        description: "Nama lengkap customer."
+
+      - name: staff_id
+        description: "Identifier staff."
+
+      - name: store_id
+        description: "Identifier store."
+
+      - name: rental_id
+        description: "Identifier rental terkait payment."
+
+      - name: film_id
+        description: "Identifier film terkait rental."
+
+      - name: film_title
+        description: "Judul film terkait rental."
+
+      - name: amount
+        description: "Nilai pembayaran."
+        data_tests:
+          - not_null

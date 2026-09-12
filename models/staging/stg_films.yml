@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: stg_films
+    description: "Staging model untuk data film."
+    columns:
+      - name: film_id
+        description: "Unique identifier untuk film."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: title
+        description: "Judul film."
+        data_tests:
+          - not_null
+
+      - name: description
+        description: "Deskripsi film."
+
+      - name: rental_rate
+        description: "Harga rental film."
+
+      - name: replacement_cost
+        description: "Biaya penggantian film."
+
+      - name: length_minutes
+        description: "Durasi film dalam menit."
+
+      - name: rating
+        description: "Rating MPAA film dalam format text."

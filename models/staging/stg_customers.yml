@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: "Staging model untuk data customer dari Pagila."
+    columns:
+      - name: customer_id
+        description: "Unique identifier untuk customer."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: first_name
+        description: "Nama depan customer."
+
+      - name: last_name
+        description: "Nama belakang customer."
+
+      - name: email
+        description: "Alamat email customer."
+
+      - name: is_active
+        description: "Status aktif customer."
+
+      - name: created_at
+        description: "Waktu customer dibuat."
+
+      - name: last_update
+        description: "Waktu terakhir data customer diperbarui."

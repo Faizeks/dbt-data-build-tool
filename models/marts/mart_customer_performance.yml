@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: mart_customer_performance
+    description: "Mart untuk melihat performa dan aktivitas customer."
+    columns:
+      - name: customer_id
+        description: "Unique identifier customer."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: customer_name
+        description: "Nama lengkap customer."
+
+      - name: total_rentals
+        description: "Total rental customer."
+
+      - name: first_rented_at
+        description: "Waktu rental pertama customer."
+
+      - name: last_rented_at
+        description: "Waktu rental terakhir customer."
+
+      - name: lifetime_payment_total
+        description: "Total seluruh pembayaran customer."
+
+      - name: average_payment_value
+        description: "Rata-rata nilai pembayaran berdasarkan jumlah rental."
